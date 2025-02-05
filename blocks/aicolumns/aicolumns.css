@@ -40,7 +40,7 @@
   margin-top: 0; /* Remove margin between the text elements */
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .aicolumns {
     flex-direction: row; /* Ensure flex direction is row on wider screens */
   }
