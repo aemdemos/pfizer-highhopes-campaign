@@ -1,0 +1,64 @@
+
+.aicolumns-teal-wrapper {
+  background-color: #8ec5b9; /* Light teal background color */
+  padding: 20px;
+}
+
+.aicolumns-teal {
+  display: flex;
+  align-items: center;
+  gap: 0; /* Adjust gap to balance spacing */
+}
+
+.aicolumns-teal > div {
+  display: flex;
+  flex-direction: row; /* Ensure side by side layout */
+  align-items: center; /* Center align items vertically */
+}
+
+.aicolumns-teal > div > div {
+  flex: 1;
+}
+
+.aicolumns-teal-img-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -30px; /* Adjust overlap */
+}
+
+.aicolumns-teal-img-col::before {
+  content: '';
+  position: absolute;
+  width: 180%; /* Larger circular background */
+  padding-top: 180%; /* This will create a circular aspect ratio */
+  border-radius: 50%;
+  background: white;
+  z-index: -1; /* Ensure the circle is behind the image */
+  left: -20%; /* Adjust position to center the circle */
+}
+
+.aicolumns-teal-img-col img {
+  max-width: 100%;
+  height: auto;
+  z-index: 1; /* Ensure the image is above the circle */
+}
+
+.aicolumns-teal > div > div p {
+  margin: 0; /* Remove default margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px; /* Adjust padding for better alignment */
+}
+
+@media (min-width: 900px) {
+  .aicolumns-teal > div {
+    flex-direction: row; /* Ensure side by side layout for larger screens */
+  }
+
+  .aicolumns-teal > div > div {
+    order: unset;
+  }
+}
