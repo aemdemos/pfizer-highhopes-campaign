@@ -53,7 +53,7 @@
   padding-left: 30px; /* Adjust padding for better alignment */
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .aicolumns-teal > div {
     flex-direction: row; /* Ensure side by side layout for larger screens */
   }
