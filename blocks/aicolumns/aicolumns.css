@@ -1,6 +1,9 @@
 
 .aicolumns-wrapper {
   background-color: yellow; /* Set the background color to yellow */
+  display: flex;
+  align-items: center; /* Center align items vertically */
+  height: 100vh; /* Full height to vertically center the content */
 }
 
 .aicolumns {
@@ -16,20 +19,30 @@
   display: flex;
   flex-direction: row; /* Ensure flex direction is row */
   align-items: center; /* Center align items vertically */
-  padding: 20px; /* Add some padding */
+  width: 100%; /* Ensure it takes the full width */
 }
 
-.aicolumns > div:first-child {
+.aicolumns > div > div:first-child {
   flex: 1; /* Allow the text block to take equal space */
   display: flex;
-  flex-direction: column; /* Stack text elements */
+  flex-direction: column; /* Stack text elements vertically */
   justify-content: center; /* Center align text vertically */
   align-items: flex-start; /* Align text to the start (left) */
+  padding-left: 20px; /* Add padding for spacing */
+}
+
+.aicolumns > div > div:last-child {
+  flex: 1; /* Allow the image block to take equal space */
+  display: flex;
+  justify-content: center; /* Center align image */
+  align-items: center; /* Center align image */
+  padding-right: 20px; /* Add padding for spacing */
 }
 
 .aicolumns img {
   width: auto; /* Ensure image maintains its aspect ratio */
   max-width: 100%; /* Ensure image does not overflow its container */
+  height: auto; /* Ensure image does not distort */
 }
 
 .aicolumns h1 {
@@ -40,17 +53,13 @@
   margin-top: 0; /* Remove margin between the text elements */
 }
 
-@media (width >= 900px) {
+@media (max-width: 900px) {
   .aicolumns {
-    flex-direction: row; /* Ensure flex direction is row on wider screens */
+    flex-direction: column; /* Change to column layout on smaller screens */
   }
 
   .aicolumns > div {
-    gap: 24px; /* Add gap between elements */
-  }
-
-  .aicolumns > div:first-child {
-    flex: 1; /* Allow elements to take equal space */
+    margin-bottom: 20px; /* Add margin between stacked elements */
   }
 }
 
