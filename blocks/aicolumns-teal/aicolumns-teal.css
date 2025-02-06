@@ -56,7 +56,7 @@
   font-size: var(--body-font-size-m); /* Adjust font size for readability */
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .aicolumns-teal {
     flex-direction: column;
     align-items: flex-start;
