@@ -1,18 +1,18 @@
 
 .aicolumns-teal-wrapper {
-  background-color: #618d88; /* Update to match the new teal background color */
+  background-color: #8fd6bd; /* Update to match the original teal background color */
   padding: 20px;
 }
 
 .aicolumns-teal {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Align items to the top */
 }
 
 .aicolumns-teal > div {
   display: flex;
   flex-direction: row; /* Ensure side by side layout */
-  align-items: center; /* Center align items vertically */
+  align-items: flex-start; /* Align items to the top */
 }
 
 .aicolumns-teal > div > div {
@@ -35,9 +35,9 @@
   border-radius: 50%;
   background: white;
   z-index: -1; /* Ensure the circle is behind the image */
-  left: -17.5%; /* Center the circle horizontally */
-  top: 15%; /* Increase padding above the image */
-  transform: translateY(-15%); /* Adjust position to increase padding above the image */
+  left: 50%; /* Center the circle horizontally */
+  top: 30%; /* Adjust top positioning to center the circle vertically */
+  transform: translate(-50%, -30%); /* Adjust position to fully center the circle */
 }
 
 .aicolumns-teal-img-col img {
@@ -45,13 +45,13 @@
   height: auto;
   z-index: 1; /* Ensure the image is above the circle */
   position: relative;
-  bottom: -50px; /* Extend image beyond the bottom bound of the teal background */
+  bottom: -20px; /* Adjust to extend image beyond the bottom bound of the teal background */
 }
 
 .aicolumns-teal > div > div:last-child {
-  padding-left: 20px; /* Adjust padding for better alignment */
+  padding-left: 40px; /* Increase padding for better alignment */
   display: flex;
-  justify-content: center; /* Center align text vertically */
+  justify-content: flex-start; /* Align text to the top */
   flex-direction: column; /* Ensure text column layout */
 }
 
@@ -59,7 +59,6 @@
   margin: 0; /* Remove margin between paragraphs */
   padding-top: 10px; /* Adjust padding for better separation */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: column; /* Ensure text stacked vertically */
+  justify-content: flex-start; /* Align text to the top */
 }
-
