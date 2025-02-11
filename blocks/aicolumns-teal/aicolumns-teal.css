@@ -1,0 +1,69 @@
+
+.aicolumns-teal-wrapper {
+  background-color: #78C5C7; /* Correct light teal background color */
+  padding: 30px; /* Adjust padding for better spacing */
+}
+
+.aicolumns-teal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Ensure equal spacing between elements */
+}
+
+.aicolumns-teal > div {
+  display: flex;
+  flex-direction: row; /* Ensure side-by-side layout */
+  align-items: center;
+  justify-content: space-between; /* Ensure equal spacing between elements */
+}
+
+.aicolumns-teal-img-col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.aicolumns-teal-img-col::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+  height: 270px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: -1; /* Ensure the circle is behind the image */
+}
+
+.aicolumns-teal-img-col img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.aicolumns-teal > div > div:nth-child(2) {
+  flex: 1;
+  padding-left: 40px; /* Increase padding for better spacing */
+  padding-right: 40px; /* Increase right padding */
+  margin-left: 0; /* Remove negative margin */
+  line-height: 1.6; /* Adjust line-height for better readability */
+  color: var(--text-color); /* Ensure text color is readable */
+  font-size: var(--body-font-size-m); /* Adjust font size for readability */
+}
+
+@media (width <= 600px) {
+  .aicolumns-teal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .aicolumns-teal > div > div:nth-child(2) {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
