@@ -2,7 +2,10 @@
 
 .aihero-wrapper {
   background: var(--yellow);
-  min-height: 485px; /* LHS fix */
+
+  @media (width > 1200px) {
+    min-height: 485px; /* LHS fix */
+  }
 }
 
 .aihero {
@@ -59,7 +62,8 @@
       padding-top: 4rem;
       width: 60%;
 
-      @media (width < 600px) { width: 80% }
+      @media (width < 600px) { width: 80%;        align-items: center;
+        text-align: center; }
 
       img {
         margin-bottom: -24px;
