@@ -2,6 +2,7 @@
 
 .aihero-wrapper {
   background: var(--yellow);
+  min-height: 485px; /* LHS fix */
 }
 
 .aihero {
