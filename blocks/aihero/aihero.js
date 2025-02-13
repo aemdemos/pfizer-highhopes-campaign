@@ -1,3 +1,5 @@
+import { createOptimizedPicture } from '../../scripts/aem.js';
+
 export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
 
@@ -7,6 +9,18 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
+
+      const imgSizes = [
+        { media: '(max-width: 600px)', width: '400' },
+        { media: '(min-width: 601px)', width: '720' },
+      ];
+
+      const img = pic?.querySelector('img');
+      if (img) {
+        const optimizedPic = createOptimizedPicture(img.src, 'hero image', true, imgSizes);
+        pic.replaceWith(optimizedPic);
+      }
+
       if (pic) {
         const picWrapper = pic.closest('div');
         if (picWrapper && picWrapper.children.length === 1) {
